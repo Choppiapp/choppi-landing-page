@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-white text-choppi-black;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container-custom {
+  @apply container mx-auto px-4 md:px-8;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #F7931E 0%, #FF8C00 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.hero-bg {
+  background-color: #E9A84C;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  z-index: 0;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4;
+}
+
+.section-subtitle {
+  @apply text-lg md:text-xl text-gray-600 mb-8 max-w-2xl;
+}
+
+.section-divider {
+  @apply w-20 h-1 bg-primary mb-6;
+}
+
+.feature-icon-wrapper {
+  @apply w-12 h-12 flex items-center justify-center shrink-0 mb-4;
+}
+
+.choppi-navbar {
+  @apply py-4 px-6 bg-transparent absolute top-0 left-0 right-0 z-10;
+}
+
+.choppi-button {
+  @apply px-6 py-3 font-medium rounded-md transition-all duration-300;
+}
+
+.choppi-button-primary {
+  @apply bg-white text-choppi-orange hover:bg-gray-100;
+}
+
+.choppi-button-secondary {
+  @apply border border-white text-white hover:bg-white/10;
+}
+
+.choppi-section-header {
+  @apply uppercase text-sm font-medium tracking-wider text-gray-500 mb-2;
+}
